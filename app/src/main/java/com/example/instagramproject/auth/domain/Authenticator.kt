@@ -1,6 +1,7 @@
 package com.example.instagramproject.auth.domain
 
 import android.net.Uri
+import com.example.instagramproject.auth.data.dto.CreateUserDto
 import com.google.firebase.auth.FirebaseUser
 
 interface Authenticator {
