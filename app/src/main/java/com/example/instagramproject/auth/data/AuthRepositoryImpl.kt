@@ -1,5 +1,10 @@
 package com.example.instagramproject.auth.data
 
+import android.net.Uri
+import com.example.instagramproject.auth.data.dto.CreateUserDto
+import com.example.instagramproject.auth.domain.AuthRepository
+import com.example.instagramproject.auth.domain.Authenticator
+import com.google.firebase.auth.FirebaseUser
 import javax.inject.Inject
 
 class AuthRepositoryImpl @Inject constructor(
