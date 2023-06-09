@@ -2,6 +2,9 @@ package com.example.instagramproject.auth.data
 
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.State
+import com.example.instagramproject.auth.model.Post
+import com.example.instagramproject.auth.model.User
+import com.example.instagramproject.auth.model.names
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 

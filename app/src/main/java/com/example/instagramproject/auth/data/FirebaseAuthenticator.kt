@@ -1,11 +1,14 @@
 package com.example.instagramproject.auth.data
 
+import android.net.Uri
 import com.example.instagramproject.auth.data.dto.CreateUserDto
 import com.example.instagramproject.auth.domain.Authenticator
+import com.example.instagramproject.common.utils.Constants
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
+import com.google.firebase.storage.ktx.storage
 
 
 class FirebaseAuthenticator : Authenticator {
