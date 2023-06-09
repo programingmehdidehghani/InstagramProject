@@ -1,5 +1,13 @@
 package com.example.instagramproject.auth.data
 
+import com.example.instagramproject.auth.data.dto.CreateUserDto
+import com.example.instagramproject.auth.domain.Authenticator
+import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
+
+
 class FirebaseAuthenticator : Authenticator {
     override suspend fun createUserWithEmailAndPassword(
         email: String,
