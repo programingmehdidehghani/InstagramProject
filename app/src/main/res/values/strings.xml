@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">InstagramProject</string>
+    <string name="acitivitystring"> liked your picture.</string>
+
 </resources>
