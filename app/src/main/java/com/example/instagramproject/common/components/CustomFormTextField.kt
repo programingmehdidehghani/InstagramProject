@@ -42,7 +42,7 @@ fun CustomFormTextField(
 ){
     val darkTheme: Boolean = isSystemInDarkTheme()
     val keyboardController = LocalSoftwareKeyboardController.current
-    var passwordVisible by remember { mutableStateOf(false) }
+    val passwordVisible by remember { mutableStateOf(false) }
     val keyboardTrans = if (visualTransformation == PasswordVisualTransformation()){
         if (passwordVisible) AutofillType.Password else AutofillType.Password
     }else {
