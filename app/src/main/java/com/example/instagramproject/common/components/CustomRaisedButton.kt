@@ -21,7 +21,7 @@ fun CustomRaisedButton(
 ){
     Button(
         modifier = modifier,
-        colors = ButtonDefaults.buttonColors(backgroundColor = AccentColor),
+        colors = ButtonDefaults.run { buttonColors(backgroundColor = AccentColor) },
         shape = RoundedCornerShape(size = 5.dp),
         onClick = onClick
     ) {
