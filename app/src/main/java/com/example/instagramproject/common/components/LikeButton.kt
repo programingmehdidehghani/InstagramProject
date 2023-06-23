@@ -149,7 +149,7 @@ fun LikeButtonPreview(){
             timeStamp = System.currentTimeMillis() - (6000)
         ),
         onLikeClick = {
-            
+
         }
     )
 }
