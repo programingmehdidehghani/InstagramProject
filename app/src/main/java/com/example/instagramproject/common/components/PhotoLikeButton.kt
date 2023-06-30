@@ -64,7 +64,15 @@ fun DoubleTapPhotoLikeAnimation(onDoubleTap: () -> Unit){
            if (it == LikedStates.Liked) 1f else 0f
         }
 
-        val scale 
+        val scale by transition.animateFloat(
+            transitionSpec = {
+                when {
+                    LikedStates.Initial isTransitioningTo 
+                }
+            }
+        ) {
+
+        }
     }
 
 }
