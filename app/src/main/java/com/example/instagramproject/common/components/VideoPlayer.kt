@@ -56,7 +56,7 @@ fun VideoPlayer(uri: Uri){
         }
     }) ) {
         onDispose {
-            
+            exoPlayer.release()
         }
     }
 }
