@@ -128,4 +128,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-firestore-ktx'
     implementation 'com.google.firebase:firebase-storage-ktx'
     implementation 'com.google.firebase:firebase-messaging-ktx'
+
+    implementation 'io.github.raamcosta.compose-destinations:core:1.5.1-beta'
+
 }
