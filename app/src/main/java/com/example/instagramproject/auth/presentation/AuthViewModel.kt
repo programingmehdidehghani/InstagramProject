@@ -37,7 +37,27 @@ class AuthViewModel @Inject constructor(
 
                 val result = AuthValidator.validateSignInRequest(email,password)
                 if (result.successful){
-                    sig
+                    signIn(email,password)
+                } else {
+                    viewModelScope.launch {
+                        eventChannel.send(ResultEvents.OnError(result.error!!))
+                    }
+                }
+            }
+            is AuthScreenEvents.OnRegister -> {
+                if (authScreenEvents.imageUri == null){
+                    viewModelScope.launch {
+                        eventChannel.send(ResultEvents.OnError("You have not selected an image"))
+                    }
+                    return
+                }
+                val result = AuthValidator.validateCreateUserRequest(authScreenEvents.createUserDto)
+                if (result.successful){
+                    createUser(authScreenEvents.imageUri,authScreenEvents.createUserDto)
+                } else {
+                    viewModelScope.launch {
+                        eventChannel.send(ResultEvents.OnError(result.error!!))
+                    }
                 }
             }
         }
