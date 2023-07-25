@@ -36,7 +36,6 @@ fun CustomFormTextField(
     modifier: Modifier = Modifier,
     hint: String,
     value: String,
-    onValueChange: (String) -> Unit,
     visualTransformation: VisualTransformation = VisualTransformation.None,
     KeyboardType: KeyboardType = androidx.compose.ui.text.input.KeyboardType.Text
 ){
