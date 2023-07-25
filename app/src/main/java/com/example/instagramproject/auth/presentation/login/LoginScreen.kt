@@ -2,6 +2,7 @@ package com.example.instagramproject.auth.presentation.login
 
 import android.annotation.SuppressLint
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -97,6 +98,63 @@ fun LoginScreen(
 
     }
 
+
+}
+
+@Composable
+fun SignUpSection(onSignUpClicked: () -> Unit){
+    Row(
+        horizontalArrangement = Arrangement.SpaceEvenly,
+        verticalAlignment = Alignment.CenterVertically,
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 16.dp)
+    ) {
+        Box(
+            modifier = Modifier
+                .height(1.dp)
+                .weight(1f)
+                .background(LineColor)
+        )
+        Text(
+            text = "OR",
+            style = MaterialTheme.typography.body1,
+            fontSize = 12.sp,
+            color = LightGray,
+            textAlign = TextAlign.Center,
+            modifier = Modifier.weight(1f)
+        )
+
+        Box(
+            modifier = Modifier
+                .height(1.dp)
+                .weight(1f)
+                .background(LineColor)
+        )
+    }
+
+    Spacer(modifier = Modifier.height(40.dp))
+
+    Row(
+        horizontalArrangement = Arrangement.Center,
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(bottom = 40.dp)
+    ) {
+        Text(
+            text = "Don't have an account?",
+            style = MaterialTheme.typography.button,
+            color = LightGray,
+        )
+        Spacer(modifier = Modifier.width(5.dp))
+        Text(
+            text = "Sign up",
+            style = MaterialTheme.typography.button,
+            modifier = Modifier.clickable { onSignUpClicked() }
+        )
+    }
+
+    }
 
 }
 
