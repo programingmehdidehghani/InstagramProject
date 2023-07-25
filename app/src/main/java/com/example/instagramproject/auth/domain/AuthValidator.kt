@@ -1,5 +1,9 @@
 package com.example.instagramproject.auth.domain
 
+import com.example.instagramproject.auth.data.dto.CreateUserDto
+import com.example.instagramproject.auth.presentation.ValidationResult
+import java.util.regex.Pattern
+
 object AuthValidator {
     fun validateCreateUserRequest(createUserDto: CreateUserDto): ValidationResult {
         val username = createUserDto.username
